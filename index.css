@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    background-color: #FACC15!important;
+    padding: 50px;
+    width: 25px;
+    height: 25px;
+} */
+ .home{
+    background-image: url(https://wallpapers.com/images/file/720p-food-background-1280-x-720-51zk52hmkn064yyh.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .about{
+    background-image: url(https://www.finut.org/wp-content/uploads/2019/01/1491.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+  .shop{
+    background-image: url(https://i.pinimg.com/originals/eb/17/f3/eb17f3456472fceba2ea4357f7912344.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+  .contect{
+    background-image: url(https://image.slidesdocs.com/responsive-images/slides/0-simple-gourmet-western-restaurant-introduction-planning-powerpoint-background_6d04ca1081__960_540.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }

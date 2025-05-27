@@ -9,10 +9,16 @@
     <!-- tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="index.css">
+
     <!-- font-awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- owl Carousel animation -->
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/css/owl.theme.default.min.css">
 
 </head>
 
@@ -50,13 +56,12 @@
         </div>
     </header>
 
-    <section class="relative bg-cover bg-center bg-no-repeat h-screen"
-        style="background-image: url('https://wallpapers.com/images/file/720p-food-background-1280-x-720-51zk52hmkn064yyh.jpg');">
+    <section class="relative  home h-screen">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div class="text-center text-white px-4">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Delicious Food Delivered Hot</h1>
                 <p class="text-lg md:text-xl mb-6">Fresh ingredients, fast delivery, and mouth-watering taste!</p>
-                <a href="#order"
+                <a href="shop.html"
                     class="inline-block bg-yellow-400 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full transition duration-300">
                     Order Now
                 </a>
@@ -90,67 +95,97 @@
         </div>
     </section>
 
-
-
-
     <section class="py-12 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-10">Our Menu</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
-                    <img src="https://wallpapercave.com/wp/wp3707991.jpg" alt="Breakfast"
-                        class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Breakfast</h3>
-                        <ul class="mb-6 space-y-2">
-                            <li class="flex justify-between border-b pb-1"><span>Pancakes</span><span>₹120</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Omelette</span><span>₹100</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Idli Sambar</span><span>₹90</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Poha</span><span>₹80</span></li>
-                        </ul>
-                        <button
-                            class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 rounded-lg transition">Make
-                            Order</button>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Menu</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+                        <img src="https://wallpapercave.com/wp/wp3707991.jpg" alt="Breakfast"
+                            class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-center">Breakfast</h3>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex justify-between border-b pb-1"><span>Pancakes</span><span>₹120</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Omelette</span><span>₹100</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Idli Sambar</span><span>₹90</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Poha</span><span>₹80</span></li>
+                            </ul>
+                            <button
+                                class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 rounded-lg transition"><a
+                                    href="">Make Order</a></button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
-                    <img src="https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_1200,q_auto,fl_lossy,dpr_auto,c_fill,f_auto,h_800,g_auto/mydwimnqlv3kcowdpimu"
-                        alt="Lunch" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Lunch</h3>
-                        <ul class="mb-6 space-y-2">
-                            <li class="flex justify-between border-b pb-1"><span>Veg Thali</span><span>₹180</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Paneer Butter
-                                    Masala</span><span>₹200</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Dal Makhani</span><span>₹150</span>
-                            </li>
-                            <li class="flex justify-between border-b pb-1"><span>Rice & Curry</span><span>₹130</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition">Make
-                            Order</button>
+                <div class="item">
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+                        <img src="https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_1200,q_auto,fl_lossy,dpr_auto,c_fill,f_auto,h_800,g_auto/mydwimnqlv3kcowdpimu"
+                            alt="Lunch" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-center">Lunch</h3>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex justify-between border-b pb-1"><span>Veg Thali</span><span>₹180</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Paneer Butter
+                                        Masala</span><span>₹200</span></li>
+                                <li class="flex justify-between border-b pb-1"><span>Dal Makhani</span><span>₹150</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Rice &
+                                        Curry</span><span>₹130</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition"><a
+                                    href="">Make Order</a></button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
-                    <img src="https://www.gujaratexpert.com/blog/wp-content/uploads/2024/01/Kathiyawadi-Thali-870x532.jpg"
-                        alt="Dinner" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-4 text-center">Dinner</h3>
-                        <ul class="mb-6 space-y-2">
-                            <li class="flex justify-between border-b pb-1"><span>Chapati & Sabzi</span><span>₹120</span>
-                            </li>
-                            <li class="flex justify-between border-b pb-1"><span>Khichdi</span><span>₹100</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Mixed Veg</span><span>₹130</span></li>
-                            <li class="flex justify-between border-b pb-1"><span>Curd Rice</span><span>₹110</span></li>
-                        </ul>
-                        <button
-                            class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition">Make
-                            Order</button>
+                <div class="item">
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+                        <img src="https://www.gujaratexpert.com/blog/wp-content/uploads/2024/01/Kathiyawadi-Thali-870x532.jpg"
+                            alt="Dinner" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-center">Dinner</h3>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex justify-between border-b pb-1"><span>Chapati &
+                                        Sabzi</span><span>₹120</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Khichdi</span><span>₹100</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Mixed Veg</span><span>₹130</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Curd Rice</span><span>₹110</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-lg transition"><a
+                                    href="">Make Order</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl">
+                        <img src="https://www.gujaratexpert.com/blog/wp-content/uploads/2024/01/Kathiyawadi-Thali-870x532.jpg"
+                            alt="Dinner" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-center">Fast-Food</h3>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex justify-between border-b pb-1"><span>Pizza</span><span>₹120</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Burger</span><span>₹100</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Pasta</span><span>₹130</span>
+                                </li>
+                                <li class="flex justify-between border-b pb-1"><span>Fanki</span><span>₹150</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition"><a
+                                    href="">Make Order</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,14 +238,18 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus excepturi nihil quidem
                         voluptatum, rem minima ex, aperiam nobis architecto harum id molestiae eum autem itaque
                         laudantium vitae accusantium sapiente quos ipsum omnis! Nemo dicta eligendi inventore cupiditate
-                        aspernatur veritatis minus vel laudantium repellendus? Sit consectetur facilis repudiandae ex
-                        omnis, libero tempore mollitia dolorem quia sequi quos provident ab soluta beatae ea ducimus
-                        reiciendis a assumenda eum fugiat corrupti esse itaque.
+                        aspernatur veritatis minus vel laudantium repellendus?
                     </p>
-                    <a href="#"
+                    <p class="text-gray-600 mb-6">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus excepturi nihil quidem
+                        voluptatum, rem minima ex, aperiam nobis architecto harum id molestiae eum autem itaque
+                        laudantium vitae accusantium sapiente quos ipsum omnis! Nemo dicta eligendi inventore cupiditate
+                        aspernatur veritatis minus vel laudantium repellendus?
+                    </p>
+                    <!-- <a href="#"
                         class="inline-block bg-yellow-400 text-white px-6 py-2 rounded hover:bg-gray-800 transition">
                         Read More
-                    </a>
+                    </a> -->
                 </div>
                 <div class="md:w-1/2">
                     <img src="https://tse4.mm.bing.net/th?id=OIP.gwuZrbCvlihKXnb-Cm04sQHaEJ&pid=Api&P=0&h=180"
@@ -262,8 +301,10 @@
             <div class="md:w-2/3 w-full text-center md:text-left">
                 <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">Get 70% OFF Today!</h2>
                 <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-3">
-                   "Grab a delicious deal with up to 70% OFF on all your favorite food! From pizza and burgers to pastas and desserts — everything at unbeatable prices. Hurry, it’s a limited-time offer. Order now and save big!"
-               </p>
+                    "Grab a delicious deal with up to 70% OFF on all your favorite food! From pizza and burgers to
+                    pastas and desserts — everything at unbeatable prices. Hurry, it’s a limited-time offer. Order now
+                    and save big!"
+                </p>
                 <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
                     Enjoy a massive 70% discount on all your favorite dishes. Whether it’s pizza, burgers, or desserts,
                     we’ve got your cravings covered. Limited-time offer!
@@ -316,6 +357,35 @@
 
 
     <script src="index.js"></script>
+
+    <!--  owl carousel (logo slider) -->
+    <script src="OwlCarousel2-2.3.4/js/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            // items: 4,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                425: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1024: {
+                    items: 3
+                }
+            }
+        })
+    </script>
 
 </body>
 
