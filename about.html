@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About_page</title>
-    <!-- tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <!-- Bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
 
@@ -18,248 +21,281 @@
 
 <body class="bg-white">
 
-    <header class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-3xl font-bold text-gray-800">MyFood</a>
-                </div>
+    <header class="bg-white shadow-sm">
+        <div class="custom-container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="fs-3 fw-bold text-dark text-decoration-none">MyFood</a>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-6 font-bold">
-                    <a href="index.html" class="text-gray-700 hover:text-yellow-400">Home</a>
-                    <a href="about.html" class="text-yellow-400">About Us</a>
-                    <a href="shop.html" class="text-gray-700 hover:text-yellow-400">Shop</a>
-                    <a href="contect.html" class="text-gray-700 hover:text-yellow-400">Contact</a>
+                <nav class="d-none d-md-flex gap-4 fw-bold">
+                    <a href="index.html" class="text-dark text-decoration-none hover-text-warning">Home</a>
+                    <a href="about.html" class="text-warning text-decoration-none ">About Us</a>
+                    <a href="shop.html" class="text-dark text-decoration-none hover-text-warning">Shop</a>
+                    <a href="contect.html" class="text-dark text-decoration-none hover-text-warning">Contact</a>
                 </nav>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
+                <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fa-solid fa-bars text-dark"></i>
+                </button>
+            </div>
+
+            <div class="collapse d-md-none" id="mobileMenu">
+                <div class="bg-white shadow-sm px-3 py-2 fw-bold">
+                    <a href="index.html" class="d-block text-dark text-decoration-none mb-2">Home</a>
+                    <a href="about.html" class="d-block text-warning text-decoration-none mb-2">About Us</a>
+                    <a href="shop.html" class="d-block text-dark text-decoration-none mb-2">Shop</a>
+                    <a href="contect.html" class="d-block text-dark text-decoration-none">Contact</a>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white shadow font-bold">
-            <a href="index.html" class="block text-gray-700 hover:text-yellow-400">Home</a>
-            <a href="about.html" class="block text-yellow-400">About Us</a>
-            <a href="shop.html" class="block text-gray-700 hover:text-yellow-400">Shop</a>
-            <a href="contect.html" class="block text-gray-700 hover:text-yellow-400">Contact</a>
         </div>
     </header>
 
-    <section class="relative about h-screen">
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">About Us</h2>
-                <p class="max-w-2xl mx-auto text-lg md:text-xl font-bold">
-                    Home / <span class="text-yellow-400">About</span>
+    <section class="position-relative about" style="height: 100vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+            style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="text-white text-center px-3">
+                <h2 class="fw-bold mb-3 display-5">About Us</h2>
+                <p class="fw-bold fs-5">
+                    Home / <span class="text-warning">About</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-white">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center md:items-start gap-10">
 
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">About Us</h2>
-                <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
-                    We believe in the power of good food to bring people together. Our mission is to serve delicious
-                    meals that are fresh, affordable, and full of flavor.
-                </p>
-                <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
-                    Whether you're dining in or ordering online, we ensure hygiene, taste, and quick delivery. We source
-                    ingredients locally and prepare each meal with love and care.
-                </p>
-                <p class="text-gray-600 text-base md:text-lg leading-relaxed">
-                    From hearty breakfasts to satisfying dinners — we've got you covered. Try us once and you'll come
-                    back for more!
-                </p>
-            </div>
 
-            <div class="md:w-1/2 w-full">
-                <img src="https://images.deliveryhero.io/image/foodpanda/home-foodpanda-apps.png" alt="About us image"
-                    class="rounded-2xl shadow-lg w-full h-auto object-cover">
+    <section class="bg-white py-5">
+        <div class="custom-container px-3">
+            <div class="row align-items-center gy-4">
+
+                <!-- Text Column -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h2 class="fw-bold text-dark mb-3 fs-2">About Us</h2>
+                    <p class="text-muted mb-3 fs-6">
+                        We believe in the power of good food to bring people together. Our mission is to serve delicious
+                        meals that are fresh, affordable, and full of flavor.
+                    </p>
+                    <p class="text-muted mb-3 fs-6">
+                        Whether you're dining in or ordering online, we ensure hygiene, taste, and quick delivery. We
+                        source
+                        ingredients locally and prepare each meal with love and care.
+                    </p>
+                    <p class="text-muted fs-6">
+                        From hearty breakfasts to satisfying dinners — we've got you covered. Try us once and you'll
+                        come
+                        back for more!
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="https://images.deliveryhero.io/image/foodpanda/home-foodpanda-apps.png"
+                        alt="About us image" class="img-fluid rounded-4 shadow" />
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-100 ">
-        <div class="flex flex-col-reverse md:flex-row items-center gap-10 px-4 py-12 max-w-7xl mx-auto">
+    <section class="bg-light py-5">
+        <div class="custom-container px-3">
+            <div class="row align-items-center flex-column-reverse flex-md-row gy-4">
 
-            <div class="md:w-1/2 w-full">
-                <img src="https://png.pngtree.com/background/20230417/original/pngtree-fast-food-burger-fried-chicken-advertising-background-picture-image_2445022.jpg"
-                    alt="Delicious Food" class="w-full h-auto rounded-lg shadow-md" />
-            </div>
+                <div class="col-md-6">
+                    <img src="https://png.pngtree.com/background/20230417/original/pngtree-fast-food-burger-fried-chicken-advertising-background-picture-image_2445022.jpg"
+                        alt="Delicious Food" class="img-fluid rounded shadow" />
+                </div>
 
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="text-3xl font-bold mb-4 text-gray-800">Best Price Always</h2>
-                <p class="text-gray-600 mb-6">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni laboriosam neque, asperiores
-                    voluptates debitis id quo facilis soluta voluptate odit dolorum ut ullam laudantium aut unde? Nobis
-                    incidunt nulla est voluptatum consequuntur atque vitae, error, eum architecto veritatis ipsum a
-                    voluptates saepe excepturi porro enim. Id et debitis esse?
-                </p>
+                <div class="col-md-6 text-center text-md-start">
+                    <h2 class="fw-bold text-dark fs-2 mb-3">Best Price Always</h2>
+                    <p class="text-muted mb-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio magni laboriosam neque, asperiores
+                        voluptates debitis id quo facilis soluta voluptate odit dolorum ut ullam laudantium aut unde?
+                        Nobis
+                        incidunt nulla est voluptatum consequuntur atque vitae, error, eum architecto veritatis ipsum a
+                        voluptates saepe excepturi porro enim. Id et debitis esse?
+                    </p>
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3 text-center">
 
-                <div class="flex flex-col sm:flex-row  justify-between items-center gap-6">
-                    <div class="text-center">
-                        <div class="text-3xl items-center justify-center rounded-full mb-2 mx-auto">
-                            <i class="fa-solid fa-burger"></i>
+                        <!-- Icon 1 -->
+                        <div>
+                            <div class="fs-2 mb-2 text-dark">
+                                <i class="fa-solid fa-burger"></i>
+                            </div>
+                            <p class="fw-medium small">Good Food</p>
                         </div>
-                        <p class="text-sm font-medium">Good Food</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl items-center justify-center rounded-full mb-2 mx-auto">
-                            <i class="fa-solid fa-truck"></i>
+
+                        <!-- Icon 2 -->
+                        <div>
+                            <div class="fs-2 mb-2 text-dark">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+                            <p class="fw-medium small">Fast Delivery</p>
                         </div>
-                        <p class="text-sm font-medium">Fast Delivery</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl items-center justify-center rounded-full mb-2 mx-auto">
-                            <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                        <!-- Icon 3 -->
+                        <div>
+                            <div class="fs-2 mb-2 text-dark">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <p class="fw-medium small">Nice Price</p>
                         </div>
-                        <p class="text-sm font-medium">Nice Price</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Our Fast Food</h2>
-
-            <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://tse1.mm.bing.net/th?id=OIP.nQqyNgNjtcLyh6JiRBxGqQHaFy&pid=Api&P=0&h=180"
-                        alt="Pizza" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Margherita Pizza</h3>
-                        <p class="text-gray-600 mb-4">Classic delight with 100% real mozzarella cheese.</p>
-                        <span class="text-lg font-bold text-yellow-400">₹299</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=870&q=80"
-                        alt="Burger" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cheesy Burger</h3>
-                        <p class="text-gray-600 mb-4">Juicy beef patty with melted cheese and fresh veggies.</p>
-                        <span class="text-lg font-bold text-yellow-400">₹199</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.alphacoders.com/130/thumb-1920-1308370.jpg"
-                        alt="Pasta" class="w-full h-56 object-cover">
-                    <div class="p-5">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Creamy Pasta</h3>
-                        <p class="text-gray-600 mb-4">Rich and creamy Alfredo pasta with herbs and cheese.</p>
-                        <span class="text-lg font-bold text-yellow-400">₹249</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-2">Quick food quality features</h2>
-                <p class="text-gray-500 text-lg">We provide quick service with reliable features to satisfy your
-                    cravings.</p>
-            </div>
+    <section class="bg-white py-5">
+        <div class="custom-container px-3">
+            <h2 class="text-center text-dark fw-bold fs-2 mb-5">Our Fast Food</h2>
+            <div class="row g-4">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-4">
-                    <i class="fa-solid fa-building text-black text-3xl"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800"><span
-                                class="text-yellow-400 font-bold">+1000</span> Restaurants</h3>
-                        <p class="text-gray-600 mt-2">Find meals from 1000+ restaurants near you with quality you can
-                            trust.</p>
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.nQqyNgNjtcLyh6JiRBxGqQHaFy&pid=Api&P=0&h=180"
+                            class="card-img-top object-fit-cover" style="height: 14rem;" alt="Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold text-dark">Margherita Pizza</h5>
+                            <p class="card-text text-muted">Classic delight with 100% real mozzarella cheese.</p>
+                            <span class="fw-bold text-warning fs-5">₹299</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-4">
-                    <i class="fa-solid fa-utensils text-black text-3xl"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800"><span
-                                class="text-yellow-400 font-bold">+100</span> Food Menu</h3>
-                        <p class="text-gray-600 mt-2">Explore 100+ unique dishes from across cuisines to suit every
-                            taste.</p>
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=870&q=80"
+                            class="card-img-top object-fit-cover" style="height: 14rem;" alt="Burger">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold text-dark">Cheesy Burger</h5>
+                            <p class="card-text text-muted">Juicy beef patty with melted cheese and fresh veggies.</p>
+                            <span class="fw-bold text-warning fs-5">₹199</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-4">
-                    <i class="fa-solid fa-truck text-black text-3xl"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800"><span
-                                class="text-yellow-400 font-bold">Delivery</span> or Takeaway</h3>
-                        <p class="text-gray-600 mt-2">Get your order delivered or pick it up as per your convenience.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-start gap-4">
-                    <i class="fa-solid fa-credit-card text-black text-3xl"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800">Cash or <span
-                                class="text-yellow-400 font-bold">Secure Card</span> Payment</h3>
-                        <p class="text-gray-600 mt-2">Enjoy safe payments via cash, UPI, or your favorite cards.</p>
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded">
+                        <img src="https://images.alphacoders.com/130/thumb-1920-1308370.jpg"
+                            class="card-img-top object-fit-cover" style="height: 14rem;" alt="Pasta">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold text-dark">Creamy Pasta</h5>
+                            <p class="card-text text-muted">Rich and creamy Alfredo pasta with herbs and cheese.</p>
+                            <span class="fw-bold text-warning fs-5">₹249</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-
-            <div>
-                <h3 class="text-3xl font-semibold mb-4">MyFood</h3>
-                <h3 class="text-lg font-semibold mb-2">Address</h3>
-                <p class="text-sm text-gray-400">
-                    MyFood Pvt. Ltd. <br>
-                    123 Food Street,<br>
-                    Surat, Gujarat, India<br>
-                    Phone: +91 98765 43210<br>
-                    Email: myfood123@gmail.com
-                </p>
+    <section class="bg-light py-5">
+        <div class="custom-container px-3">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark fs-2 mb-2">Quick food quality features</h2>
+                <p class="text-muted fs-5">We provide quick service with reliable features to satisfy your cravings.</p>
             </div>
+            <div class="row g-4">
 
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Categories</h3>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-white">Pizza</a></li>
-                    <li><a href="#" class="hover:text-white">Burgers</a></li>
-                    <li><a href="#" class="hover:text-white">Pasta</a></li>
-                    <li><a href="#" class="hover:text-white">Cold Drinks</a></li>
-                    <li><a href="#" class="hover:text-white">Desserts</a></li>
-                </ul>
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow d-flex align-items-start gap-3">
+                        <i class="fa-solid fa-building fs-2 text-dark"></i>
+                        <div>
+                            <h5 class="fw-semibold text-dark mb-1">
+                                <span class="text-warning fw-bold">+1000</span> Restaurants
+                            </h5>
+                            <p class="text-muted mb-0">Find meals from 1000+ restaurants near you with quality you can
+                                trust.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow d-flex align-items-start gap-3">
+                        <i class="fa-solid fa-utensils fs-2 text-dark"></i>
+                        <div>
+                            <h5 class="fw-semibold text-dark mb-1">
+                                <span class="text-warning fw-bold">+100</span> Food Menu
+                            </h5>
+                            <p class="text-muted mb-0">Explore 100+ unique dishes from across cuisines to suit every
+                                taste.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow d-flex align-items-start gap-3">
+                        <i class="fa-solid fa-truck fs-2 text-dark"></i>
+                        <div>
+                            <h5 class="fw-semibold text-dark mb-1">
+                                <span class="text-warning fw-bold">Delivery</span> or Takeaway
+                            </h5>
+                            <p class="text-muted mb-0">Get your order delivered or pick it up as per your convenience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow d-flex align-items-start gap-3">
+                        <i class="fa-solid fa-credit-card fs-2 text-dark"></i>
+                        <div>
+                            <h5 class="fw-semibold text-dark mb-1">
+                                Cash or <span class="text-warning fw-bold">Secure Card</span> Payment
+                            </h5>
+                            <p class="text-muted mb-0">Enjoy safe payments via cash, UPI, or your favorite cards.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Subscribe</h3>
-                <p class="text-sm text-gray-400 mb-4">Get the latest updates and offers.</p>
-                <form class="flex flex-col sm:flex-row items-center gap-2">
-                    <input type="email" placeholder="Enter your email"
-                        class="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <button type="submit"
-                        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition">Subscribe</button>
-                </form>
+    <footer class="bg-dark text-white py-5">
+        <div class="custom-container px-3">
+            <div class="row gy-4">
+
+                <!-- logo & Address -->
+                <div class="col-md-4">
+                    <h3 class="fs-2 fw-semibold mb-3">MyFood</h3>
+                    <h5 class="fs-6 fw-semibold mb-2">Address</h5>
+                    <p class="text-secondary small">
+                        MyFood Pvt. Ltd. <br>
+                        123 Food Street,<br>
+                        Surat, Gujarat, India<br>
+                        Phone: +91 98765 43210<br>
+                        Email: myfood123@gmail.com
+                    </p>
+                </div>
+
+                <!-- Categories section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Categories</h5>
+                    <ul class="list-unstyled text-secondary small">
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pizza</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Burgers</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pasta</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Cold Drinks</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Desserts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscribe section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Subscribe</h5>
+                    <p class="text-secondary small mb-3">Get the latest updates and offers.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" placeholder="Enter your email" class="form-control text-dark" required>
+                        <button type="submit" class="btn btn-danger px-4">Subscribe</button>
+                    </form>
+                </div>
             </div>
-
+            <hr >
+            <div class="copright">
+                <p class="text-secondary text-center small mb-3">Copyright © Myfood all rights reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -267,5 +303,4 @@
 
 
 </body>
-
 </html>

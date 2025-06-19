@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyFood_shop_page</title>
 
-    <!-- tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
 
@@ -19,273 +19,211 @@
 </head>
 
 <body class="bg-white">
-    <header class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-3xl font-bold text-gray-800">MyFood</a>
-                </div>
+    <header class="bg-white shadow-sm">
+        <div class="custom-container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="fs-3 fw-bold text-dark text-decoration-none">MyFood</a>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-6 font-bold">
-                    <a href="index.html" class="text-gray-700 hover:text-yellow-400">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-yellow-400">About Us</a>
-                    <a href="shop.html" class="text-yellow-400">Shop</a>
-                    <a href="contect.html" class="text-gray-700 hover:text-yellow-400">Contact</a>
+                <nav class="d-none d-md-flex gap-4 fw-bold">
+                    <a href="index.html" class="text-dark text-decoration-none hover-text-warning">Home</a>
+                    <a href="about.html" class="text-dark text-decoration-none hover-text-warning">About Us</a>
+                    <a href="shop.html" class="text-warning text-decoration-none ">Shop</a>
+                    <a href="contect.html" class="text-dark text-decoration-none hover-text-warning">Contact</a>
                 </nav>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
+                <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fa-solid fa-bars text-dark"></i>
+                </button>
+            </div>
+
+            <div class="collapse d-md-none" id="mobileMenu">
+                <div class="bg-white shadow-sm px-3 py-2 fw-bold">
+                    <a href="index.html" class="d-block text-dark text-decoration-none mb-2">Home</a>
+                    <a href="about.html" class="d-block text-dark text-decoration-none mb-2">About Us</a>
+                    <a href="shop.html" class="d-block text-warning text-decoration-none mb-2">Shop</a>
+                    <a href="contect.html" class="d-block text-dark text-decoration-none">Contact</a>
                 </div>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white shadow font-bold">
-            <a href="index.html" class="block text-gray-700 hover:text-yellow-400">Home</a>
-            <a href="about.html" class="block text-gray-700 hover:text-yellow-400">About Us</a>
-            <a href="shop.html" class="block text-yellow-400">Shop</a>
-            <a href="contect.html" class="block text-gray-700 hover:text-yellow-400">Contact</a>
         </div>
     </header>
 
-
-    <section class="relative shop h-screen">
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Shop</h2>
-                 <p class="max-w-2xl mx-auto text-lg md:text-xl font-bold">
-                    Home / <span class="text-yellow-400">Shop</span>
+    <section class="position-relative shop" style="height: 100vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+            style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="text-white text-center px-3">
+                <h2 class="fw-bold mb-3 display-5">Our Shop</h2>
+                <p class="fw-bold fs-5">
+                    Home / <span class="text-warning">Shop</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-10">Popular Dishes</h2>
+    <section class="py-5 bg-white">
+        <div class="custom-container px-3">
+            <h2 class="text-center fw-bold fs-2 mb-5">Popular Dishes</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg"
-                        alt="Pizza" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Cheese Pizza</h3>
-                        <p class="text-gray-600">₹250</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJYqXs_eYTVeNtugtP2q7zV_ROewS7r5-Gkg&s"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Pizza">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold"> Pizza</h5>
+                            <p class="text-muted mb-0">₹250</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://www.simplyairfryer.com/wp-content/uploads/2021/08/frozen-veggie-burger-in-air-fryer.jpg"
-                        alt="Burger" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Veggie Burger</h3>
-                        <p class="text-gray-600">₹180</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://www.simplyairfryer.com/wp-content/uploads/2021/08/frozen-veggie-burger-in-air-fryer.jpg"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Burger">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold">Veggie Burger</h5>
+                            <p class="text-muted mb-0">₹150</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://mozismenu.com/wp-content/uploads/2017/07/Veg-Hakka-Noodles-0-750x500.jpg"
-                        alt="Noodles" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Hakka Noodles</h3>
-                        <p class="text-gray-600">₹150</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                 <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://www.bigbasket.com/media/uploads/recipe/w-l/594_1.jpg"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Burger">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold">Pasta</h5>
+                            <p class="text-muted mb-0">₹100</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://png.pngtree.com/background/20230612/original/pngtree-dosa-is-sitting-on-a-plate-and-sauce-picture-image_3176179.jpg"
-                        alt="Sushi" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Masala Dosa</h3>
-                        <p class="text-gray-600">₹400</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                 <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobNZwinxrx-G0gm1guGgfuSiade6hsLQD5QANjqH05BPNnI6tCD2yS3wbCc-a8bCahMY&usqp=CAU"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Burger">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold">Fenki</h5>
+                            <p class="text-muted mb-0">₹100</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://i.pinimg.com/originals/5d/f9/aa/5df9aacdbce9d708a510836f9cea1f76.jpg" alt="Pasta"
-                        class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Pasta</h3>
-                        <p class="text-gray-600">₹220</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                 <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL87ZqLDD6HxFB7WmUpJ2gXoTY9OyHySGXbg&s"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Burger">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold">Veg Momos</h5>
+                            <p class="text-muted mb-0">₹120</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://images6.alphacoders.com/129/thumb-1920-1294748.jpg" alt="Biryani"
-                        class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Sandwich</h3>
-                        <p class="text-gray-600">₹300</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                 <div class="col-sm-6 col-lg-4">
+                    <div class="bg-light rounded-4 shadow-sm hover-shadow transition overflow-hidden h-100">
+                        <img src="https://wiproappliances.com/cdn/shop/articles/Veg_grilled_cheese_sandwich.jpg?v=1714126819"
+                            class="w-100 object-fit-cover" style="height: 200px;" alt="Burger">
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 fw-semibold">Sandwich</h5>
+                            <p class="text-muted mb-0">₹150</p>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://im.whatshot.in/img/2020/Apr/shutterstock-1133804639-cropped-1557741221-2-momos-1586947864.jpg"
-                        alt="Dosa" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Momos</h3>
-                        <p class="text-gray-600">₹100</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
+                        <div class="p-3 d-flex justify-content-between align-items-center">
+                            <div class="text-warning">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping text-dark"></i></a>
                         </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://ontheflame.com/wp-content/uploads/2022/11/DSC_0207-2-scaled.jpg" alt="Ice Cream"
-                        class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Fanki</h3>
-                        <p class="text-gray-600">₹150</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
-                        </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="https://wallpapercave.com/wp/wp8370495.jpg" alt="Salad" class="w-full h-48 object-cover">
-                    <div class="p-4 flex items-center justify-between">
-                        <h3 class="text-xl font-semibold">Pani Puri</h3>
-                        <p class="text-gray-600">₹100</p>
-                    </div>
-                    <div class="p-4 flex items-center justify-between">
-                        <div class="icon">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>
-                        </div>
-                        <a href=""> <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+   <footer class="bg-dark text-white py-5">
+        <div class="custom-container px-3">
+            <div class="row gy-4">
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div>
-                <h3 class="text-3xl font-semibold mb-4">MyFood</h3>
-                <h3 class="text-lg font-semibold mb-2">Address</h3>
-                <p class="text-sm text-gray-400">
-                    MyFood Pvt. Ltd. <br>
-                    123 Food Street,<br>
-                    Surat, Gujarat, India<br>
-                    Phone: +91 98765 43210<br>
-                    Email: myfood123@gmail.com
-                </p>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Categories</h3>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-white">Pizza</a></li>
-                    <li><a href="#" class="hover:text-white">Burgers</a></li>
-                    <li><a href="#" class="hover:text-white">Pasta</a></li>
-                    <li><a href="#" class="hover:text-white">Cold Drinks</a></li>
-                    <li><a href="#" class="hover:text-white">Desserts</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Subscribe</h3>
-                <p class="text-sm text-gray-400 mb-4">Get the latest updates and offers.</p>
-                <form class="flex flex-col sm:flex-row items-center gap-2">
-                    <input type="email" placeholder="Enter your email"
-                        class="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <button type="submit"
-                        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition">Subscribe</button>
-                </form>
-            </div>
+                <!-- logo & Address -->
+                <div class="col-md-4">
+                    <h3 class="fs-2 fw-semibold mb-3">MyFood</h3>
+                    <h5 class="fs-6 fw-semibold mb-2">Address</h5>
+                    <p class="text-secondary small">
+                        MyFood Pvt. Ltd. <br>
+                        123 Food Street,<br>
+                        Surat, Gujarat, India<br>
+                        Phone: +91 98765 43210<br>
+                        Email: myfood123@gmail.com
+                    </p>
+                </div>
 
+                <!-- Categories section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Categories</h5>
+                    <ul class="list-unstyled text-secondary small">
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pizza</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Burgers</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pasta</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Cold Drinks</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Desserts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscribe section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Subscribe</h5>
+                    <p class="text-secondary small mb-3">Get the latest updates and offers.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" placeholder="Enter your email" class="form-control text-dark" required>
+                        <button type="submit" class="btn btn-danger px-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr >
+            <div class="copright">
+                <p class="text-secondary text-center small mb-3">Copyright © Myfood all rights reserved.</p>
+            </div>
         </div>
     </footer>
 

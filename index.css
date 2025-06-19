@@ -3,6 +3,14 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+  .custom-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 /* .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
     background-color: #FACC15!important;
     padding: 50px;

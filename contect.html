@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyFood_contect_page</title>
 
-    <!-- tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
 
@@ -19,94 +19,88 @@
 </head>
 
 <body class="bg-white">
-    <header class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-3xl font-bold text-gray-800">MyFood</a>
-                </div>
+    <header class="bg-white shadow-sm">
+        <div class="custom-container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <a href="index.html" class="fs-3 fw-bold text-dark text-decoration-none">MyFood</a>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-6 font-bold">
-                    <a href="index.html" class="text-gray-700 hover:text-yellow-400">Home</a>
-                    <a href="about.html" class="text-gray-700 hover:text-yellow-400">About Us</a>
-                    <a href="shop.html" class="text-gray-700 hover:text-yellow-400">Shop</a>
-                    <a href="contect.html" class="text-yellow-400">Contact</a>
+                <nav class="d-none d-md-flex gap-4 fw-bold">
+                    <a href="index.html" class="text-dark text-decoration-none hover-text-warning">Home</a>
+                    <a href="about.html" class="text-dark text-decoration-none hover-text-warning">About Us</a>
+                    <a href="shop.html" class="text-dark text-decoration-none hover-text-warning">Shop</a>
+                    <a href="contect.html" class="text-warning text-decoration-none">Contact</a>
                 </nav>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
+                <button class="btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    <i class="fa-solid fa-bars text-dark"></i>
+                </button>
+            </div>
+
+            <div class="collapse d-md-none" id="mobileMenu">
+                <div class="bg-white shadow-sm px-3 py-2 fw-bold">
+                    <a href="index.html" class="d-block text-warning text-decoration-none mb-2">Home</a>
+                    <a href="about.html" class="d-block text-dark text-decoration-none mb-2">About Us</a>
+                    <a href="shop.html" class="d-block text-dark text-decoration-none mb-2">Shop</a>
+                    <a href="contect.html" class="d-block text-dark text-decoration-none">Contact</a>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white shadow font-bold">
-            <a href="index.html" class="block text-gray-700 hover:text-yellow-400">Home</a>
-            <a href="about.html" class="block text-gray-700 hover:text-yellow-400">About Us</a>
-            <a href="shop.html" class="block text-gray-700 hover:text-yellow-400">Shop</a>
-            <a href="contect.html" class="block text-yellow-400">Contact</a>
-        </div>
     </header>
 
-
-    <section class="relative contect h-screen">
-        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Contect</h2>
-                <p class="max-w-2xl mx-auto text-lg md:text-xl font-bold">
-                    Home / <span class="text-yellow-400">Contect</span>
+    <section class="position-relative contect" style="height: 100vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+            style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="text-white text-center px-3">
+                <h2 class="fw-bold mb-3 display-5">Our Contect</h2>
+                <p class="fw-bold fs-5">
+                    Home / <span class="text-warning">Contect</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-100 py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <section class="bg-light py-5">
+        <div class="custom-container px-3">
+            <div class="row g-5">
+                <!-- Sign Up Form -->
+                <div class="col-md-6">
+                    <div class="bg-white p-4 p-md-5 rounded shadow">
+                        <h2 class="fs-3 fw-bold mb-4 text-dark">Sign Up</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label text-muted">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-muted">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label text-muted">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="••••••••" />
+                            </div>
+                            <button type="submit" class="btn w-100 text-white fw-semibold"
+                                style="background-color: #facc15;">
+                                Sign Up
+                            </button>
+                        </form>
+                    </div>
+                </div>
 
-            <div class="bg-white p-8 rounded-lg shadow">
-                <h2 class="text-2xl font-bold mb-6 text-gray-800">Sign Up</h2>
-                <form>
-                    <div class="mb-4">
-                        <label class="block text-sm text-gray-700 mb-2" for="name">Name</label>
-                        <input type="text" id="name"
-                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                            placeholder="Your Name">
+                <!-- Contact Info -->
+                <div class="col-md-6">
+                    <div class="bg-white p-4 p-md-5 rounded shadow">
+                        <h2 class="fs-3 fw-bold mb-4 text-dark">Our Contact</h2>
+                        <p class="text-muted mb-4">Have questions or feedback? We'd love to hear from you!</p>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><strong class="text-warning">Address:</strong> 123 MyFood Street, Surat,
+                                India</li>
+                            <li class="mb-2"><strong class="text-warning">Phone:</strong> +91 98765 43210</li>
+                            <li class="mb-2"><strong class="text-warning">Email:</strong> myfood123@gmail.com</li>
+                            <li><strong class="text-warning">Time:</strong> Mon - Sat, 9:00 AM to 10:00 PM</li>
+                        </ul>
                     </div>
-                    <div class="mb-4">
-                        <label class="block text-sm text-gray-700 mb-2" for="email">Email</label>
-                        <input type="email" id="email"
-                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                            placeholder="you@example.com">
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-sm text-gray-700 mb-2" for="password">Password</label>
-                        <input type="password" id="password"
-                            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                            placeholder="••••••••">
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-yellow-400 text-white py-2 rounded-md hover:bg-gray-800 transition">Sign
-                        Up</button>
-                </form>
-            </div>
-            <div class="bg-white p-8 rounded-lg shadow">
-                <h2 class="text-2xl font-bold mb-6 text-gray-800">Our Contact</h2>
-                <p class="text-gray-700 mb-4">Have questions or feedback? We'd love to hear from you!</p>
-                <ul class="text-gray-700 space-y-3">
-                    <li><span class="font-bold text-yellow-400">Adress : </span>
-                        123 MyFood Street, Surat,
-                        India</li>
-                    <li><span class="font-bold text-yellow-400">Phone : </span> +91
-                        98765 43210</li>
-                    <li><span class="font-bold text-yellow-400">Gmail : </span>
-                        myfood123@gmail.com</li>
-                    <li><span class="font-bold text-yellow-400">Time : </span> Mon -
-                        Sat, 9:00 AM to 10:00 PM</li>
-                </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -117,40 +111,49 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div>
-                <h3 class="text-3xl font-semibold mb-4">MyFood</h3>
-                <h3 class="text-lg font-semibold mb-2">Address</h3>
-                <p class="text-sm text-gray-400">
-                    MyFood Pvt. Ltd. <br>
-                    123 Food Street,<br>
-                    Surat, Gujarat, India<br>
-                    Phone: +91 98765 43210<br>
-                    Email: myfood123@gmail.com
-                </p>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Categories</h3>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-white">Pizza</a></li>
-                    <li><a href="#" class="hover:text-white">Burgers</a></li>
-                    <li><a href="#" class="hover:text-white">Pasta</a></li>
-                    <li><a href="#" class="hover:text-white">Cold Drinks</a></li>
-                    <li><a href="#" class="hover:text-white">Desserts</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Subscribe</h3>
-                <p class="text-sm text-gray-400 mb-4">Get the latest updates and offers.</p>
-                <form class="flex flex-col sm:flex-row items-center gap-2">
-                    <input type="email" placeholder="Enter your email"
-                        class="w-full px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <button type="submit"
-                        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition">Subscribe</button>
-                </form>
-            </div>
+    <footer class="bg-dark text-white py-5">
+        <div class="custom-container px-3">
+            <div class="row gy-4">
 
+                <!-- logo & Address -->
+                <div class="col-md-4">
+                    <h3 class="fs-2 fw-semibold mb-3">MyFood</h3>
+                    <h5 class="fs-6 fw-semibold mb-2">Address</h5>
+                    <p class="text-secondary small">
+                        MyFood Pvt. Ltd. <br>
+                        123 Food Street,<br>
+                        Surat, Gujarat, India<br>
+                        Phone: +91 98765 43210<br>
+                        Email: myfood123@gmail.com
+                    </p>
+                </div>
+
+                <!-- Categories section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Categories</h5>
+                    <ul class="list-unstyled text-secondary small">
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pizza</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Burgers</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Pasta</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Cold Drinks</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary hover-white">Desserts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscribe section -->
+                <div class="col-md-4">
+                    <h5 class="fw-semibold mb-3">Subscribe</h5>
+                    <p class="text-secondary small mb-3">Get the latest updates and offers.</p>
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" placeholder="Enter your email" class="form-control text-dark" required>
+                        <button type="submit" class="btn btn-danger px-4">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="copright">
+                <p class="text-secondary text-center small mb-3">Copyright © Myfood all rights reserved.</p>
+            </div>
         </div>
     </footer>
 
